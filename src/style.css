@@ -1,0 +1,11 @@
+.data-tip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tool-tip {
+    border-top-color: orange !important;
+    border-top-style: solid !important;
+    border-top-width: 6px !important;
+  }
