@@ -18,10 +18,10 @@ export default function Bachelor(){
         <div className={classes.heroContent}>
           <Container maxWidth="md">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              {header.title}
+              {header.studentTypes.title}
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              {header.body}
+              {header.studentTypes.body}
             </Typography>
             {/* <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">

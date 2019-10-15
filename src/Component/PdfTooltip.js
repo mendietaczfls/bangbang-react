@@ -2,6 +2,7 @@ import React from 'react';
 import { Document, Page, pdfjs } from "react-pdf";
 import ReactTooltip from 'react-tooltip'
 import "../style.css";
+import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
 
 class PdfToolTip extends React.Component {
     constructor(props) {
@@ -34,9 +35,19 @@ class PdfToolTip extends React.Component {
     render(){
         return(
             <div>
-                <a data-tip className="data-tip" data-for={this.state.pdfName}>{this.state.pdfNameCN}</a>
+                <a data-tip className="data-tip" data-for={this.state.pdfName} href={this.state.pdfUrl} target="_blank"><DoneOutlineIcon color="primary"/>&nbsp;&nbsp;{this.state.pdfNameCN}</a>
 
-                <ReactTooltip className="tool-tip" id={this.state.pdfName} place={"bottom"} delayHide={500} delayShow={500} delayUpdate={500}>
+                <ReactTooltip className="tool-tip" id={this.state.pdfName} place={"right"} delayHide={500} delayShow={500} delayUpdate={500} overridePosition={ ({ left, top }, currentEvent, currentTarget, node) => {
+                    const d = document.documentElement;
+
+                    left = Math.min(d.clientWidth - node.clientWidth, left);
+                    top = Math.min(d.clientHeight - node.clientHeight, top);
+
+                    left = Math.max(0, left);
+                    top = Math.max(0, top);
+
+                    return { top, left }
+                    } }>
                 <nav>
                     <button onClick={this.goToPrevPage}>Prev</button>
                     <button onClick={this.goToNextPage}>Next</button>

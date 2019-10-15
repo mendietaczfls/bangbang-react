@@ -12,13 +12,13 @@
     "mobx": "5.13.0",
     "mobx-react": "6.1.1",
     "react": "16.8.6",
+    "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "16.8.6",
     "react-pdf": "^4.1.0",
     "react-router": "5.0.1",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
-    "react-tooltip": "^3.11.1",
-    "reactstrap": "^8.0.1"
+    "react-tooltip": "^3.11.1"
   },
   "devDependencies": {
     "typescript": "3.3.3"

@@ -9,8 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import Copyright from './Component/Copyright';
 import useStyles from './Component/Material-UI-Styles';
 import {footer as footer_data}  from './Data/All';
-import {documents} from './Data/Bachelor';
-import PdfTooltip from './Component/PdfTooltip';
+import DocList from './DocList';
+
 
 function App() {
   const classes = useStyles();
@@ -25,10 +25,8 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
-        {/* <Bachelor/> */}
-        {documents.A.map(doc => (
-          <PdfTooltip pdfName={doc.pdfName} pdfNameCN={doc.pdfNameCN} pdfUrl={doc.pdfUrl} numPages={doc.numPages}/>
-        ))}
+        <Bachelor/>
+        <DocList/>
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           {/* footer title */}

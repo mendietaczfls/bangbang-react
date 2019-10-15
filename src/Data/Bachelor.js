@@ -34,9 +34,16 @@ export const students = [
     }];
   
   export const header = {
-    title: "本科准备资料模板",
-    body: "点选学生类型，查看该类学生需要提交的申请资料"
+    studentTypes: {
+      title: "本科准备资料模板",
+      body: "点选学生类型，查看该类学生需要提交的申请资料"
+    },
+    documentList: {
+      title: "准备资料清单",
+      body: "鼠标悬浮或点击查看文件模板"
+    }
   }
+  
 
   export const documents = {
     A: [
