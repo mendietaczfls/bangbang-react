@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Bachelor from './Bachelor'
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,8 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Copyright from './Component/Copyright';
 import useStyles from './Component/Material-UI-Styles';
 import {footer as footer_data}  from './Data/All';
-import DocList from './DocList';
-
+import Model from './Model';
 
 function App() {
   const classes = useStyles();
@@ -25,8 +23,7 @@ function App() {
           </Typography>
         </Toolbar>
       </AppBar>
-        <Bachelor/>
-        <DocList/>
+        <Model/>
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           {/* footer title */}

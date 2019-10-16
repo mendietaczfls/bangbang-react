@@ -7,10 +7,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import useStyles from './Component/Material-UI-Styles';
-import {header, students} from './Data/Bachelor';
+import useStyles from './Material-UI-Styles';
 
-export default function Bachelor(){
+export default function StudentTypes({header, students}){
+  
     const classes = useStyles();
     return (
         <main>
@@ -18,10 +18,10 @@ export default function Bachelor(){
         <div className={classes.heroContent}>
           <Container maxWidth="md">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              {header.studentTypes.title}
+              {header.title}
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              {header.studentTypes.body}
+              {header.body}
             </Typography>
             {/* <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
@@ -42,7 +42,7 @@ export default function Bachelor(){
         <Container className={classes.cardGrid} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {students.map(student => (
+            {Array.from(students).map(student => (
               <Grid item key={student.key} xs={12} sm={6} md={4}>
                 <Card className={classes.card}>
                   <CardMedia

@@ -46,22 +46,39 @@ export const students = [
   
 
   export const documents = {
-    A: [
-        {
-          pdfUrl: "https://bangbang-doco.s3-ap-southeast-2.amazonaws.com/Bachelor/china-high-school/completed/gaokao-transcript.pdf",
-          pdfName: "gaokao-transcript",
-          pdfNameCN: "高考成绩单",
-          numPages: 2
+    docArray: [
+        [{
+            pdfUrl: "https://bangbang-doco.s3-ap-southeast-2.amazonaws.com/Bachelor/china-high-school/completed/gaokao-transcript.pdf",
+            pdfName: "gaokao-transcript",
+            pdfNameCN: "高考成绩单",
+            numPages: 2
+          },{
+            pdfUrl: "https://bangbang-doco.s3-ap-southeast-2.amazonaws.com/Bachelor/china-high-school/completed/gaokao-transcript-certificate.pdf",
+            pdfName: "gaokao-transcript-certificate",
+            pdfNameCN: "高考成绩单和公证及翻译",
+            numPages: 5
+          },{
+            pdfNameCN: "语言成绩（雅思或PTE）",
+          },{
+            pdfNameCN: "护照",
+          }
+        ],
+        [{
+          pdfUrl: "https://bangbang-doco.s3-ap-southeast-2.amazonaws.com/Bachelor/china-high-school/not-completed/high-school-grades.pdf",
+          pdfName: "high-school-grades",
+          pdfNameCN: "高中平时成绩（中文+英文）",
+          numPages: 1
         },{
-          pdfUrl: "https://bangbang-doco.s3-ap-southeast-2.amazonaws.com/Bachelor/china-high-school/completed/gaokao-transcript-certificate.pdf",
-          pdfName: "gaokao-transcript-certificate",
-          pdfNameCN: "高考成绩单和公证及翻译",
-          numPages: 5
+          pdfUrl: "https://bangbang-doco.s3-ap-southeast-2.amazonaws.com/Bachelor/china-high-school/not-completed/enrollment-certificate.pdf",
+          pdfName: "enrollment-certificate",
+          pdfNameCN: "在读证明",
+          numPages: 2
         },{
           pdfNameCN: "语言成绩（雅思或PTE）",
         },{
           pdfNameCN: "护照",
         }
-    ]
+      ]
+      ] 
   }
   
