@@ -3,9 +3,10 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import useStyles from './Material-UI-Styles';
 import PdfTooltip from './PdfTooltip';
+import PdfTooltip2 from './PdfTooltip2';
 
 
-export default function DocList({header, documents}){
+export default function DocList({header, documents ,studentTypeDisplay}){
     const classes = useStyles();
     return (
         <main>
@@ -16,12 +17,12 @@ export default function DocList({header, documents}){
               {header.title}
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              {header.body}
+              {header.body}&nbsp;{studentTypeDisplay}
             </Typography>
           </Container>
         </div>
         {Array.from(documents).map(doc => (
-          <PdfTooltip pdfName={doc.pdfName} pdfNameCN={doc.pdfNameCN} pdfUrl={doc.pdfUrl} numPages={doc.numPages}/>
+          <PdfTooltip2 pdfName={doc.pdfName} pdfNameCN={doc.pdfNameCN} pdfUrl={doc.pdfUrl} numPages={doc.numPages}/>
         ))}
       </main>
     )

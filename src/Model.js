@@ -15,11 +15,12 @@ import {Link, Element} from 'react-scroll';
 
 
 function Model(){
-    const [studentType, setStudentType] = useState(1);
+    const [studentType, setStudentType] = useState(0);
+    const [docList, setDocList] = useState(docs.docArray[studentType]);
     const classes = useStyles();
 
     useEffect(() => {
-      // Doclist(hder.documentList,docs.docArray[studentType])
+      setDocList(docs.docArray[studentType])
     })
     return(
         <div>
@@ -28,7 +29,7 @@ function Model(){
               <div className={classes.heroContent}>
                 <Container maxWidth="md">
                   <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-                    {hder.studentTypes.title} {studentType}
+                    {hder.studentTypes.title}
                   </Typography>
                   <Typography variant="h5" align="center" color="textSecondary" paragraph>
                     {hder.studentTypes.body}
@@ -69,7 +70,7 @@ function Model(){
             </main>
             {/* <StudentTypes header={hder.studentTypes} students={stds}/> */}
             <Element name="test1">
-              <Doclist header={hder.documentList} documents={docs.docArray[studentType]}/>
+              <Doclist header={hder.documentList} documents={docList} studentTypeDisplay={stds[studentType].type}/>
             </Element>
         </div>
     )
