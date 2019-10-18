@@ -13,7 +13,7 @@ export default function DocList({header, documents ,studentTypeDisplay}){
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="md">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+            <Typography component="h2" variant="h3" align="center" color="textPrimary" gutterBottom>
               {header.title}
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
